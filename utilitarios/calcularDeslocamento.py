@@ -15,24 +15,19 @@ def calcular_deslocamento(arrayVelocidadeX, arrayVelocidadeY, pontoInicial, pont
             aceleracaoX = (arrayVelocidadeX[x+1] - arrayVelocidadeX[x])/0.02
             deslocamentoX = 0.5 * aceleracaoX * t**2
             pontoX = pontoInicial.x + deslocamentoX * sinalX
-            #print(f"{deslocamentoX} = 0.5 * {aceleracaoX} * {t**2}")
             #eixo y
             aceleracaoY = (arrayVelocidadeY[x+1] - arrayVelocidadeY[x])/0.02
             deslocamentoY = 0.5 * aceleracaoY * t**2
             pontoY = pontoInicial.y + deslocamentoY * sinalY
-            #print(aceleracaoY)
         else:
             t = x * 0.02
             #eixo x
             deslocamentoX = arrayVelocidadeX[x] * (t - 1)
             deslocamentoX += deslocamentoAceleradoX
-            #print(f"deslocamento X = {arrayVelocidadeX[x]} * ({t}-1) = {deslocamentoX}")
-            #print(f"deslocamentoX = {arrayVelocidadeX[x]} * {t-1}")
             pontoX = pontoInicial.x + deslocamentoX * sinalX
             #eixo y
             deslocamentoY = arrayVelocidadeY[x] * (t - 1)
             deslocamentoY += deslocamentoAceleradoY
-            #print(f"deslocamentoY = {arrayVelocidadeY[x]} * {t} - {1}")
             pontoY = pontoInicial.y + deslocamentoY * sinalY
         X.append(pontoX)
         Y.append(pontoY)

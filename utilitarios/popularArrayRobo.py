@@ -19,10 +19,7 @@ def calcular_velocidade(ponto_inicial, ponto_final, tempo_total, aceleracao, vel
             velocidade = velocidade_max
             vx = velocidade * math.cos(angulo) * sinalX
             vy = velocidade * math.sin(angulo) * sinalY
-        #print(f"vx = {velocidade} * {math.cos(angulo)} * {sinalX}")
-        #print(f"vy = {velocidade} * {math.sin(angulo)} * {sinalY}")       
         velocidade_x.append(vx)
         velocidade_y.append(vy)
-        #print(vx, vy, math.floor(tempo/0.02))
         tempo += 0.02
     return velocidade_x, velocidade_y

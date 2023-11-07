@@ -28,5 +28,4 @@ def gerarGraficoTrajetoriasTempo(arrayBola, pontoInicial, pontoFinal, arrayRobo_
     plt.legend()
     salvar = "imagensGeradas/trajetoriasTempo.png"
     plt.savefig(salvar)
-    plt.show()
     plt.close()

@@ -15,7 +15,6 @@ def gerarGraficoVelocidadeTempoBola(bola_vx, bola_vy):
     plt.legend()
     salvar = "imagensGeradas/velocidadeTempoBola.png"
     plt.savefig(salvar)
-    plt.show()
     plt.close()
     return
 
@@ -33,6 +32,5 @@ def gerarGraficoVelocidadeTempoRobo(robo_vx, robo_vy):
     plt.legend()
     salvar = "imagensGeradas/velocidadeTempoRobo.png"
     plt.savefig(salvar)
-    plt.show()
     plt.close()
     return

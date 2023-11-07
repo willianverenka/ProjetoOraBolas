@@ -14,7 +14,6 @@ def gerarGraficoAceleracaoTempoRobo(robo_ax, robo_ay):
     plt.legend()
     salvar = "imagensGeradas/aceleracaoTempoRobo.png"
     plt.savefig(salvar)
-    plt.show()
     plt.close()
     return
 

@@ -9,5 +9,4 @@ def gerarGraficoTrajetoria(robo_x, robo_y, bola_x, bola_y, pontoInicial, pontofi
     plt.legend()
     salvar = "imagensGeradas/trajetorias.png"
     plt.savefig(salvar)
-    plt.show()
     plt.close()

@@ -17,9 +17,8 @@ array = carregar("trajetoria_bola.txt") #carrega o arquivo da bola
 
 # logica de interceptacao
 
-ponto = Ponto(0, 6, 0)
+ponto = Ponto(9, 6, 0)
 robo = Robo(ponto, 2.8, 2.8, 0.09)
-arrayDistanciaRelativa = [] # array utilitaria para a geracao do grafico da distancia relativa
 pontofinal = acharPonto(array, robo) # acha o ponto de interceptacao considerando as limitacoes
 print(pontofinal.x, pontofinal.y)
 if(pontofinal == -1):
@@ -40,26 +39,6 @@ robo_ax, robo_ay = media_pontos(robo_vx, robo_vy)
 distRelativa = distanciaRelativa(robo_x, robo_y, pontofinal)
 print(distRelativa[len(distRelativa)-1])
 
-# for x in range(len(bola_vy)-1):
-#     print(f"{bola_vy[x+1]} - {bola_vy[x]}")
-# for x in range(len(robo_vx)):
-#     print(robo_vx[x], robo_vy[x], x)
-
-# c = 0
-# for d in distRelativa:
-#     print(d, robo.raio)
-#     if d < robo.raio:
-#         distRelativa.remove(d)
-#         c+=1
-
-# for x in range(c):
-#     robo_x.pop()
-#     robo_y.pop()
-# print(c)
-
-# for x in range(len(robo_x)):
-#     print(robo_x[x], robo_y[x])
-
 gerarGraficoTrajetoria(robo_x, robo_y, bola_x, bola_y, ponto, pontofinal)
 gerarGraficoVelocidadeTempoRobo(robo_vx, robo_vy)
 gerarGraficoVelocidadeTempoBola(bola_vx, bola_vy)
@@ -67,8 +46,4 @@ gerarGraficoAceleracaoTempoRobo(robo_ax, robo_ay)
 gerarGraficoAceleracaoTempoBola(bola_ax, bola_ay)
 gerarGraficoDistanciaRelativa(distRelativa)
 
-# gerarGraficoDistanciaRelativa(array, ponto, pontofinal, x_robo, y_robo)
-# gerarGraficoTrajetoria(array, robo.coordenada, pontofinal, x_robo, y_robo)
-# gerarGraficoVelocidadeTempo(array, ponto, pontofinal)
-# gerarGraficoTrajetoriasTempo(array, ponto, pontofinal, x_robo, y_robo)
 exportarRobo(robo_x, robo_y)
